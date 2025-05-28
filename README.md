@@ -1,1 +1,1 @@
-Hi there, these are my swayfx configuration files. The theme is snowy.
+### work in progress, i'm making three themes
