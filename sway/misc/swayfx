@@ -1,0 +1,22 @@
+blur enable
+blur_xray enable
+blur_passes 1
+
+corner_radius 6
+
+shadows enable
+shadows_on_csd enable
+shadow_blur_radius 7
+shadow_offset 0 0
+
+layer_effects "waybar" {
+    blur disable;
+    shadow disable;
+    corner_radius 0;
+}
+
+layer_effects "fuzzel" {
+    blur enable;
+    shadow disable;
+    corner_radius 0;
+}

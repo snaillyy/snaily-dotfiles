@@ -1,0 +1,259 @@
+[{
+  // main bar
+  "id": "main",
+  "name": "main-bar",
+  "layer": "top",
+  "position": "top",
+
+  "modules-center": ["sway/window", "privacy"],
+  "modules-left": ["custom/os", "custom/inv-border2", "sway/workspaces", "sway/mode"],
+  "modules-right": ["group/info", "custom/inv-border1", "group/hardware"],
+
+  "sway/workspaces": {
+    "all-outputs": true
+  },
+
+  "sway/mode": {
+    "format": "{layout}",
+    "max-length": 30
+  },
+
+  "sway/window": {
+    "format": "{title}",
+    "max-length": 32
+  },
+
+  // --- hardware stuff? ---
+  "custom/menu": {
+    "format": " 󰫢 ",
+    "tooltip-format": "Application Launcher (fuzzel)",
+    "on-click": "~/.config/swayscripts/fuzzel.sh"
+  },
+
+  "custom/lock": {
+    "format": "  ",
+    "tooltip-format": "Lock screen",
+    "on-click": "~/.config/swayscripts/hardware.sh lock"
+  },
+  
+  "custom/hibernate": {
+    "format": " 󰤄 ",
+    "tooltip-format": "Hibernate",
+    "on-click": "~/.config/swayscripts/hardware.sh hibernate"
+  },
+
+  "custom/restart": {
+    "format": "  ",
+    "tooltip-format": "Restart",
+    "on-click": "~/.config/swayscripts/hardware.sh reboot"
+  },
+
+  "custom/suspend": {
+    "format": " 󱖐 ",
+    "tooltip-format": "Suspend",
+    "on-click": "~/.config/swayscripts/hardware.sh suspend"
+  },
+  
+  "custom/poweroff": {
+    "format": " ⏻ ",
+    "tooltip-format": "Power off",
+    "on-click": "~/.config/swayscripts/hardware.sh poweroff"
+  },
+
+  // --- groups ---
+  "group/hardware": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 300,
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/menu",
+      "custom/poweroff",
+      "custom/restart",
+      "custom/hibernate",
+      "custom/lock"
+    ]
+  },
+
+  "group/hardware-secondary": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 300,
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/suspend"
+    ]
+  },
+
+  "group/audio": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 300,
+      "children-class": "audio",
+      "transition-left-to-right": false
+    },
+
+    "modules": [
+      "pulseaudio",
+      "pulseaudio/slider"
+    ]
+  },
+
+  "group/info": {
+    "orientation": "horizontal",
+    "modules": [
+      "tray",
+      "group/audio",
+      "memory",
+      "cpu",
+      "clock",
+      "custom/notification"
+    ]
+  },
+
+  // modules
+  "custom/notification": {
+    "tooltip": true,
+    "tooltip-format": "Notifications",
+
+    "on-click": "swaync-client -t -sw -s ~/.config/swaync/pink/style.css",
+    "on-click-right": "swaync-client -d -sw",
+    
+    // these prevent the scroll up/down crashing waybar, at least it did on my machine repetitively.
+    "on-scroll-up": "",
+    "on-scroll-down": "",
+    
+    "exec": "swaync-client -swb",
+    "exec-if": "which swaync-client",
+
+    "return-type": "json",
+    "escape": true,
+
+    "format": "{icon} {0}",
+    "format-icons": {
+      "none": "",
+      "notification": "󱅫",
+      "dnd-notification": "󰂠",
+      "dnd-none": "󰪓",
+      "inhibited-notification": "󰂛",
+      "inhibited-none": "󰪑",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "󰪑"
+    }
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "󰂰 {volume}%",
+    "format-muted": "󰖁 Muted",
+    "format-icons": {
+      "default": "󰕾",
+      "headset": "",
+      "speaker": "󰜟",
+      "phone": "󰏶"
+    },
+
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "pavucontrol"
+  },
+
+  "clock": {
+    "interval": 1,
+    // for 24 hour {:%R}
+    // for 12 hour {:%I:%M %p}
+    "format": "󰥔 {:%I:%M %p}",
+    "format-alt": "󰃭 {:%e-%b-%G}",
+    "tooltip-format": "<tt>{calendar}</tt>"
+  },
+
+  "cpu": {
+    "interval": 2,
+    "format": "  {usage}%"
+  },
+
+  "memory": {
+    "interval": 2,
+    "format": "  {percentage}%"
+  },
+
+  "privacy": {
+    "type": [
+      {"type": "screenshare"},
+      {"type": "audio-in"},
+      {"type": "audio-out"}
+    ]
+  },
+
+  // --- os icon ---
+  "custom/os": {
+    "exec": "~/.config/swayscripts/icon.sh",
+    "format": "{text}",
+    "tooltip-format": "OS Icon"
+  },
+
+  // hacky styling, since i cannot create objects inside waybar
+  "custom/inv-border1": {
+    "format": " ",
+    "tooltip-format": ""
+  },
+
+  "custom/inv-border2": {
+    "format": " ",
+    "tooltip-format": ""
+  }
+},
+
+{
+  // additional info overlay
+  "id": "overlay",
+  "name": "overlay-bar",
+  "positon": "top",
+  "mode": "dock",
+
+  "margin-top": 5,
+  "start_hidden": true,
+  "ipc": "true",
+    
+  "modules-center": [],
+  "modules-left": [],
+  "modules-right": ["keyboard-state", "idle_inhibitor", "disk", "language"],
+
+  "sway/language": {
+    "format": "{short} {variant}",
+    "on-click": "swaymsg input type:keyboard xkb_switch_layout next",
+  },
+
+  "keyboard-state": {
+    "numlock": true,
+    "capslock": true,
+    "format": {
+        "numlock": "N {icon}",
+        "capslock": "C {icon}"                                                                                                                                                       
+    },
+    "format-icons": {
+        "locked": "",
+        "unlocked": ""
+    }
+  },
+
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+        "activated": " ",
+        "deactivated": " "
+    }
+  },
+
+  "disk": {
+    "format": "󱛟 {percentage_free}%",
+    "tooltip-format": "{used}",
+    "unit": "GB",
+    "states": {
+      "warning": 80,
+      "critical": 90
+    }
+  }
+
+}]
