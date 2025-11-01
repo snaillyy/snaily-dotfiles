@@ -1,14 +1,15 @@
 /* color scheme */
-@define-color bar-color rgba(59, 64, 99, 0.3);
 @define-color bg-color rgba(233, 170, 210, 1);
+@define-color bar-color rgba(59, 64, 99, 0.3);
 @define-color border-color rgba(255, 255, 255, 1);
+@define-color workspace-buttons rgba(252, 136, 199, 1);
 
 @define-color text-color rgb(255, 255, 255);
 @define-color shadow-color rgb(222, 125, 186);
 
 @define-color audioslider-bg rgb(255, 255, 255);
 
-/* idk what to name this, multiples? simplification? */
+/* abstraction */
 * {
     font-family: "FantasqueSansM Nerd Font";
     font-size: 18px;
@@ -23,6 +24,19 @@
     margin: 2px 2px 0 2px;
     padding: 0px 5px 0px 5px;
     
+}
+
+#window, #info {
+    margin: 5px 0px 10px 0;
+
+    border-radius: 10px;
+
+    background-color: @bg-color;
+}
+
+#window, #info, #workspaces,
+#custom-os, #hardware {
+    box-shadow: 1px 2px 0 @shadow-color;
 }
 
 /* tray isn't set because it's buggy when hovering */
@@ -52,14 +66,7 @@ tooltip label {
 
 /* center modules */
 #window {
-    margin: 5px 0px 10px 0;
     padding: 0 5px 0px 5px;
-
-    background-color: @bg-color;
-
-    border-radius: 10px;
-
-    box-shadow: 1px 2px 0 @shadow-color;
 }
 
 /* https://github.com/Alexays/Waybar/issues/1448 */
@@ -72,31 +79,33 @@ tooltip label {
 
 /* left side Modules */
 #workspaces {
-    margin: 0 0 0 5px;
-}
-
-#workspaces button {
-    margin: 4px 0 10px 5px;
-    padding: 3px 5px 3px 5px;
-    color: white;
+    margin: 5px 10px 10px 0;
+    padding: 0 5px 0 5px;
 
     background-color: @bg-color;
 
     border-radius: 10px;
+}
 
-    box-shadow: 1px 2px 0 @shadow-color;
+#workspaces button {
+    margin: 0px 2px 0px 2px;
+    padding: 3px 12px 3px 5px;
+    color: white;
+
+    background-color: @workspace-buttons;
+
+    border: 1px white solid;
+    border-radius: 10px;
 }
 
 #custom-os {
     margin: 0 0 2px 0;
-    padding: 0 15px 0 10px;
+    padding: 0 18px 0 14px;
     font-size: 25px;
 
     background-color: @bg-color;
 
     border-radius: 0 0 10px 0;
-
-    box-shadow: 1px 2px 0 @shadow-color;
 }
 
 /* right side modules */
@@ -107,19 +116,10 @@ tooltip label {
     background-color: @bg-color;
 
     border-radius: 0 0 0 10px;
-
-    box-shadow: 1px 2px 0 @shadow-color;
 }
 
 #info {
-    margin: 5px 10px 10px 0;
     padding: 0 5px 0 5px;
-
-    background-color: @bg-color;
-
-    border-radius: 10px;
-
-    box-shadow: 1px 2px 0 @shadow-color;
 }
 
 #pulseaudio-slider {
@@ -152,7 +152,6 @@ tooltip label {
     border: @shadow-color 2px solid;
 }
 
-
 /* left and right inverted corners */
 #custom-inv-border1, #custom-inv-border2 {
     margin: 0;
@@ -174,8 +173,6 @@ tooltip label {
     background: @bg-color;
     color: @text-color;
 }
-
-
 
 /* animations */
 @keyframes shine {

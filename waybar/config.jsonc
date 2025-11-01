@@ -5,12 +5,26 @@
   "layer": "top",
   "position": "top",
 
-  "modules-center": ["sway/window", "privacy"],
+  "modules-center": ["sway/window"],
   "modules-left": ["custom/os", "custom/inv-border2", "sway/workspaces", "sway/mode"],
   "modules-right": ["group/info", "custom/inv-border1", "group/hardware"],
 
   "sway/workspaces": {
-    "all-outputs": true
+    "all-outputs": true,
+    "format": "{name} <span size='medium'>{icon}</span>",
+    "format-icons": {
+      "1": "󰉊",
+      "2": "",
+      "3": "",
+      "4": "󰈙",
+      "5": "",
+      "6": "",
+      "7": "󰇮",
+      "8": "",
+      "9": "",
+      "10": "",
+      "urgent": "󰀨"
+    }
   },
 
   "sway/mode": {
@@ -104,6 +118,7 @@
   "group/info": {
     "orientation": "horizontal",
     "modules": [
+      "privacy",
       "tray",
       "group/audio",
       "memory",
@@ -165,7 +180,29 @@
     // for 12 hour {:%I:%M %p}
     "format": "󰥔 {:%I:%M %p}",
     "format-alt": "󰃭 {:%e-%b-%G}",
-    "tooltip-format": "<tt>{calendar}</tt>"
+    "tooltip-format": "{calendar}",
+
+    "actions": {
+      "on-click-right": "mode",
+      "on-scroll-up": "tz_up",
+      "on-scroll-down": "tz-down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    },
+
+    "calendar": {
+                    "mode"          : "month",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "left",
+                    "on-scroll"     : -1,
+                    "format": {
+                              "months":     "<span color='#f55ba1'><b>{}</b></span>",
+                              "days":       "<span color='#ffffff'><b>{}</b></span>",
+                              "weeks":      "<span color='#de7ab1'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#de7ab1'><b>{}</b></span>",
+                              "today":      "<span color='#fa3e94'><b><u>{}</u></b></span>"
+                              }
+                    },
   },
 
   "cpu": {
@@ -210,7 +247,7 @@
   "id": "overlay",
   "name": "overlay-bar",
   "positon": "top",
-  "mode": "dock",
+  "mode": "overlay",
 
   "margin-top": 5,
   "start_hidden": true,

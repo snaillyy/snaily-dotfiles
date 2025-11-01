@@ -44,14 +44,19 @@ set $menu ~/.config/swayscripts/fuzzel.sh shortcut
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output DP-3 {
-    background ~/Pictures/Wallpapers/34.jpg fill
-    resolution 1920x1080
+    #background ~/Pictures/Wallpapers/41.jpg fill
+    resolution 1920x1080@165Hz
+    position 0,0
 }
 
 output HDMI-A-3 {
-        background ~/Pictures/Wallpapers/34.jpg fill
-        resolution 1920x1080
+        #background ~/Pictures/Wallpapers/41.jpg fill
+        resolution 1920x1080@60Hz
 }
+
+set $wallpaper ~/Downloads/nanachi-made-in-abyss.3840x2160.mp4
+exec "mpvpaper -f -o '--loop' DP-3 $wallpaper"
+#exec echo "test" > ~/test.log & disown
 
 # Example configuration:
 #
@@ -59,7 +64,6 @@ output HDMI-A-3 {
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 workspace 1 output DP-3
 workspace 2 output HDMI-A-3
-output DP-3 resolution 1920x1080@165Hz position 0,0
 
 ### Idle configuration
 #
@@ -111,7 +115,7 @@ output DP-3 resolution 1920x1080@165Hz position 0,0
     bindsym $ps1 exec grim -g "$(slurp)" - | wl-copy
 
     # swaylock
-    bindsym $mod+Shift+Ctrl+q exec swaylock -C ~/.config/swaylock/config
+    bindsym $mod+Shift+p exec swaylock -C ~/.config/swaylock/config
 
     # restart waybar waybar
     bindsym $mod+Shift+w exec "pkill waybar; waybar & disown"
@@ -120,6 +124,13 @@ output DP-3 resolution 1920x1080@165Hz position 0,0
     bindsym $mod+f10 exec pactl set-sink-mute @DEFAULT_SINK@ toggle
     bindsym $mod+f11 exec pactl set-sink-volume @DEFAULT_SINK@ -5%
     bindsym $mod+f12 exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+    # ------------- WIP ---------------
+    # alt tab workspaces
+    set $ps2 2
+    #bindsym Alt+s workspace number $ps2
+    bindsym Alt+s exec notify-send -u normal test1 test2
+    bindsym Alt+Shift+s exec swaync-client --reload-css
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
