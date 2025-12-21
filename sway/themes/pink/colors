@@ -1,9 +1,0 @@
-# pink
-
-#                       border    bg        text      indicator   child_border
-client.focused          #fcd1d7   #E9AAD2   #ffffff   #ffffff     #fcd1d7
-client.focused_inactive #ffc4ccff   #ed96c6ff   #ffffff   #ffffff     #fcd1d7
-
-client.unfocused        #f690beff   #f690beff   #ffffff   #ffffff     #f690beff
-
-client.urgent           #ff1a89ff   #ff1a89ff   #ffffff   #ffffff     #ff1a89ff
