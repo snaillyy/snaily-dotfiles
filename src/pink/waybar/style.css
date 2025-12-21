@@ -1,0 +1,268 @@
+/* main bar */
+/* --- colorscheme --- */
+@define-color bar-color rgba(59, 64, 99, 0.3);
+
+/* text color, background color, shadows, and borders */
+@define-color fg-color rgb(255, 255, 255);
+@define-color bg-color rgba(233, 170, 210, 1);
+@define-color shadow-color rgb(222, 125, 186);
+@define-color border-color rgba(255, 255, 255, 1);
+
+/* every module's background */
+@define-color modules-bg rgba(252, 136, 199, 1);
+@define-color modules-border rgba(255, 255, 255, 1);
+
+/* pulseaudio slider */
+@define-color audioslider-bg rgb(255, 255, 255);
+@define-color audioslider-inner rgb(233, 170, 210);
+@define-color audioslider-outter rgb(217, 111, 144);
+
+/* animation colors */
+@define-color button-glow rgb(255, 156, 217);
+
+@define-color shadow-glow rgb(255, 255, 255);
+@define-color shine-ray rgb(255, 255, 255);
+
+/* --- abstraction --- */
+* {
+    font-family: "FantasqueSansM Nerd Font";
+    font-size: 18px;
+    font-style: normal;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/* casting shadow to containers */
+#hardware, #info, #window, 
+#workspaces, #custom-os {
+    box-shadow: 0px 2px @shadow-color;
+}
+
+/* making os and hardware larger */
+#hardware, #custom-os {
+    margin: 0 0 2px 0;
+}
+
+/* adjusting right, center, left containers */
+#info, #window, #workspaces {
+    margin: 6px 0 8px 0;
+
+    border-radius: 10px;
+
+    background-color: @bg-color;
+}
+
+/* styling the modules */
+#custom-notification, #clock, #cpu, #memory,
+#battery, #pulseaudio, #pulseaudio-slider, #tray,
+#privacy, #mode, #workspaces button,
+#tags button {
+    margin: 2px;
+    padding: 0 5px 0 5px;
+
+    background-color: @modules-bg;
+
+    border: 0.5px solid @modules-border;
+    border-radius: 10px;
+}
+
+/* nerd fonts didn't center some of the icons, making them very out of place */
+#custom-suspend, #custom-lock,
+#custom-hibernate, #custom-restart, #custom-poweroff {
+    margin: 2px;
+}
+
+/* to "center" the icon */
+#custom-menu {
+    padding: 0 0 0 2px;
+}
+
+/* --- base/external --- */
+.main-bar {
+    color: @fg-color;
+    background: none;
+}
+
+tooltip {
+    background-color: @bg-color;
+    
+    border: 2px solid @border-color;
+    border-radius: 10px;
+}
+
+tooltip label {
+    color: @fg-color;
+    text-shadow: none;
+}
+
+/* --- center modules --- */
+#window {
+    padding: 0 10px 0px 10px;
+}
+
+/* https://github.com/Alexays/Waybar/issues/1448 */
+#waybar.empty #window{
+    background: none;
+
+    text-shadow: none;
+    box-shadow: none;
+
+    border: none;
+}
+
+/* --- left modules --- */
+/* order is from left to right */
+#custom-os {
+    padding: 0 20px 0 14px;
+    font-size: 25px;
+
+    background-color: @bg-color;
+
+    border-radius: 0 0 10px 0;
+}
+
+#workspaces {
+    padding: 0 5px 0 5px;
+
+    background-color: @bg-color;
+
+    border-radius: 10px;
+}
+
+#workspaces button {
+    padding: 3px 12px 3px 5px;
+
+    /* for some reason the wild card doesn't pick up the button */
+    color: @fg-color;
+
+    background-color: @modules-bg;
+
+    border: 0.5px white solid;
+    border-radius: 10px;
+}
+
+/* --- right modules --- */
+/* order is from right to left */
+#hardware {
+    padding: 0 15px 0 7px;
+
+    background-color: @bg-color;
+
+    border-radius: 0 0 0 10px;
+}
+
+#info {
+    padding: 0 5px 0 5px;
+}
+
+#battery {
+    background: none;
+}
+
+#pulseaudio-slider {
+    padding: 0;
+}
+
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+
+#pulseaudio-slider trough {
+    margin: 0 5px 0 5px;
+    min-height: 10px;
+    min-width: 100px;
+
+    border-radius: 5px;
+
+    background: none;
+    background-color: @audioslider-bg;
+}
+
+#pulseaudio-slider highlight {
+    min-height: 1px;
+    min-width: 6px;
+    border-radius: 5px;
+    background-color: @audioslider-inner;
+
+    border: @audioslider-outter 2px solid;
+}
+
+
+/* --- left/right inverted corners --- */
+#custom-inv-border1, #custom-inv-border2 {
+    box-shadow: 0px -25px 0 0 @bg-color;
+    background-color: transparent;
+}
+
+#custom-inv-border1 {
+    border-top-right-radius: 25px;
+}
+
+#custom-inv-border2 {
+    border-top-left-radius: 25px;
+}
+
+/* --- defining animations --- */
+@keyframes hardware-shine {
+    25% {
+        background: linear-gradient(
+            190deg,
+            @bg-color 75%,
+            @shine-ray 100%
+        );
+    }
+    50% {
+        box-shadow: 0 1px @shadow-glow;
+    }
+    75% {
+        box-shadow: 0 1px @shadow-glow;
+    }
+    100% {
+        box-shadow: 0 1px @shadow-glow;
+    }
+}
+
+@keyframes glow {
+    50% {
+        background-color: @button-glow;
+        border-bottom: 1px solid @shadow-glow;
+    }
+    75% {
+        background-color: @button-glow;
+        border-bottom: 1px solid @shadow-glow;
+    }
+    100% {
+        background-color: @button-glow;
+        border-bottom: 1px solid @shadow-glow;
+    }
+}
+
+/* --- setting animations --- */
+#hardware:hover {
+    animation: hardware-shine 750ms forwards;
+    animation-direction: normal;
+}
+
+/* reset default css */
+#workspaces button:hover {
+    transition: none;
+    
+    box-shadow: none;
+    text-shadow: none;
+}
+
+/* tray module isn't set because it's buggy */
+#custom-notification:hover, #clock:hover, #cpu:hover, 
+#memory:hover, #battery:hover, #pulseaudio:hover,
+#pulseaudio-slider:hover, #privacy:hover, #mode:hover,
+#workspaces button:hover, #tags button:hover {
+    animation: glow 500ms forwards;
+    animation-direction: normal;
+}
+
+/* maybe could do more with animations? */

@@ -1,0 +1,312 @@
+{
+  "id": "main",
+  "name": "main-bar",
+  "layer": "top",
+  "position": "top",
+
+  /* for some reason, i have to give a null value to scrolling */
+  /* due to some weird bug crashing waybar when scrolling in grouped modules */
+
+  "modules-center": ["sway/window"],
+  "modules-left": ["custom/os", "custom/inv-border2", "sway/workspaces", "sway/mode"],
+  "modules-right": ["group/info", "custom/inv-border1", "group/hardware"],
+
+  // --- compositor workspaces & settings ---
+  // sway
+  "sway/workspaces": {
+    "all-outputs": true,
+    "format": "{name} <span size='medium'>{icon}</span>",
+    "format-icons": {
+      "1": "󰉊",
+      "2": "",
+      "3": "",
+      "4": "󰈙",
+      "5": "",
+      "6": "",
+      "7": "󰇮",
+      "8": "",
+      "9": "",
+      "10": "",
+      "urgent": "󰀨"
+    }
+  },
+
+  "sway/window": {
+    "format": "{title}",
+    "max-length": 32
+  },
+  
+  "sway/mode": {
+    "format": "{layout}",
+    "max-length": 30
+  },
+
+  // niri
+  "niri/workspaces": {
+    "all-outputs": false,
+    "format": "{value} {icon}",
+    "format-icons": {
+      "1": "󰉊",
+      "2": "",
+      "3": "",
+      "4": "󰈙",
+      "5": "",
+      "6": "",
+      "7": "󰇮",
+      "8": "",
+      "9": "",
+      "10": "",
+      "focused": "󰇥",
+      "urgent": "󰀨"
+    }
+  },
+
+  // river
+  "river/mode": {
+    "format": "mode: {}",
+    "set-tags": [
+      2147483649,
+      2147483650,
+      2147483652,
+      2147483656,
+      2147483664
+    ]
+  },
+
+  "river/tags": {
+    "num-tags": 5
+  },
+
+  "river/window": {
+    "format": "{}"
+  },
+
+  "river/layout": {
+    "format": "{}",
+    "min-length": 4,
+    "align": "right"
+  },
+  
+  // --- menu & hardware ---
+  "custom/menu": {
+    "on-scroll-up": "",
+    "on-scroll-down": "",
+    "format": " 󱗼 ",
+    "tooltip-format": "Application Launcher",
+    "on-click": "fuzzel --config ~/.config/fuzzel/fuzzel.ini -a top-right"
+  },
+  
+  "custom/lock": {
+    "on-scroll-up": "",
+    "on-scroll-down": "",
+    "format": "  ",
+    "tooltip-format": "Lock screen",
+    "on-click": "~/.local/share/snaily-dotfiles/swayscripts/hardware.sh lock"
+  },
+
+  "custom/suspend": {
+    "on-scroll-up": "",
+    "on-scroll-down": "",
+    "format": " 󰏤 ",
+    "tooltip-format": "Suspend",
+    "on-click": "~/.local/share/snaily-dotfiles/swayscripts/hardware.sh suspend"
+  },
+  
+  "custom/hibernate": {
+    "on-scroll-up": "",
+    "on-scroll-down": "",
+    "format": " 󰤄 ",
+    "tooltip-format": "Hibernate",
+    "on-click": "~/.local/share/snaily-dotfiles/swayscripts/hardware.sh hibernate"
+  },
+
+  "custom/restart": {
+    "on-scroll-up": "",
+    "on-scroll-down": "",
+    "format": "  ",
+    "tooltip-format": "Restart",
+    "on-click": "~/.local/share/snaily-dotfiles/swayscripts/hardware.sh reboot"
+  },
+
+  "custom/poweroff": {
+    "on-scroll-up": "",
+    "on-scroll-down": "",
+    "format": " ⏻ ",
+    "tooltip-format": "Power off",
+    "on-click": "~/.local/share/snaily-dotfiles/swayscripts/hardware.sh poweroff"
+  },
+
+  // --- grouping modules ---
+  "group/hardware": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 300,
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/menu",
+      "custom/poweroff",
+      "custom/restart",
+      "custom/hibernate",
+      "custom/suspend",
+      "custom/lock"
+    ]
+  },
+
+  "group/audio": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 300,
+      "children-class": "audio",
+      "transition-left-to-right": false
+    },
+
+    "modules": [
+      "pulseaudio",
+      "pulseaudio/slider"
+    ]
+  },
+
+  "group/info": {
+    "orientation": "horizontal",
+    "modules": [
+      "privacy",
+      "tray",
+      "group/audio",
+      "memory",
+      "cpu",
+      "battery",
+      "clock",
+      "custom/notification"
+    ]
+  },
+
+  // --- modules ---
+  "custom/notification": {
+    "on-scroll-up": "",
+    "on-scroll-down": "",
+    "tooltip": true,
+    "tooltip-format": "Notifications",
+
+    "on-click": "swaync-client -t -sw -s ~/.config/swaync/pink/style.css",
+    "on-click-right": "swaync-client -d -sw",
+    
+    "exec": "swaync-client -swb",
+    "exec-if": "which swaync-client",
+
+    "return-type": "json",
+    "escape": true,
+
+    "format": "{icon} {0}",
+    "format-icons": {
+      "none": "",
+      "notification": "󱅫",
+      "dnd-notification": "󰂠",
+      "dnd-none": "󰪓",
+      "inhibited-notification": "󰂛",
+      "inhibited-none": "󰪑",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "󰪑"
+    }
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "󰂰 {volume}%",
+    "format-muted": "󰖁 Muted",
+    "format-icons": {
+      "default": "󰕾",
+      "headset": "",
+      "speaker": "󰜟",
+      "phone": "󰏶"
+    },
+
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "pavucontrol"
+  },
+
+  "clock": {
+    "interval": 1,
+    // for 24 hour {:%R}
+    // for 12 hour {:%I:%M %p}
+    "format": "󰥔 {:%I:%M %p}",
+    "format-alt": "󰃭 {:%e-%b-%G}",
+    "tooltip-format": "{calendar}",
+
+    "actions": {
+      "on-click-right": "mode",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    },
+
+    "calendar": {
+                    "mode"          : "month",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "left",
+                    "on-scroll"     : -1,
+                    "format": {
+                              "months":     "<span color='#f55ba1'><b>{}</b></span>",
+                              "days":       "<span color='#ffffff'><b>{}</b></span>",
+                              "weeks":      "<span color='#de7ab1'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#de7ab1'><b>{}</b></span>",
+                              "today":      "<span color='#fa3e94'><b><u>{}</u></b></span>"
+                              }
+                    }
+  },
+
+  "cpu": {
+    "on-scroll-up": "",
+    "on-scroll-down": "",
+    "interval": 2,
+    "format": "  {usage}%"
+  },
+
+  "memory": {
+    "on-scroll-up": "",
+    "on-scroll-down": "",
+    "interval": 2,
+    "format": "  {percentage}%"
+  },
+
+  "privacy": {
+    "on-scroll-up": "",
+    "on-scroll-down": "",
+    "type": [
+      {"type": "screenshare"},
+      {"type": "audio-in"},
+      {"type": "audio-out"}
+    ]
+  },
+
+  "battery": {
+    "on-scroll-up": "",
+    "on-scroll-down": "",
+    "interval": 30,
+    "format": "{icon} {capacity}%",
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "tooltip-format" : "{power}, {time}, {health}",
+    "bat-compatibility": true,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    }
+  },
+
+  // --- os icon ---
+  "custom/os": {
+    "exec": "~/.local/share/snaily-dotfiles/swayscripts/icon.sh",
+    "format": "{text}",
+    "tooltip-format": "OS Icon"
+  },
+
+  // inverted borders
+  "custom/inv-border1": {
+    "format": " ",
+    "tooltip-format": ""
+  },
+
+  "custom/inv-border2": {
+    "format": " ",
+    "tooltip-format": ""
+  }
+}

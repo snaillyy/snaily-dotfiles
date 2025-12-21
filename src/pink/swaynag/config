@@ -1,0 +1,35 @@
+[warning]
+font=FantasqueSansM Nerd Font
+
+background=FF91C900
+border=FFFFFFFF
+border-bottom=FFFFFFFF
+
+text=FFFFFFFF
+button-text=FFFFFFFF
+
+button-margin-right=40
+message-padding=10
+button-padding=5
+
+button-background=FF91C9FF
+
+details-background=FF91C9FF
+
+[shutdown]
+font=FantasqueSansM Nerd Font
+
+background=FF91C900
+border=FFFFFFFF
+border-bottom=FFFFFFFF
+
+text=FFFFFFFF
+button-text=FFFFFFFF
+
+button-margin-right=40
+message-padding=10
+button-padding=5
+
+button-background=FF91C9FF
+
+details-background=FF91C9FF
