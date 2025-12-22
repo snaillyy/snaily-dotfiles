@@ -19,9 +19,7 @@
 
 /* animation colors */
 @define-color button-glow rgb(255, 156, 217);
-
 @define-color shadow-glow rgb(255, 255, 255);
-@define-color shine-ray rgb(255, 255, 255);
 
 /* --- abstraction --- */
 * {
@@ -209,13 +207,6 @@ tooltip label {
 
 /* --- defining animations --- */
 @keyframes hardware-shine {
-    25% {
-        background: linear-gradient(
-            190deg,
-            @bg-color 75%,
-            @shine-ray 100%
-        );
-    }
     50% {
         box-shadow: 0 1px @shadow-glow;
     }
@@ -230,15 +221,15 @@ tooltip label {
 @keyframes glow {
     50% {
         background-color: @button-glow;
-        border-bottom: 1px solid @shadow-glow;
+        border-bottom: 0.5px solid @shadow-glow;
     }
     75% {
         background-color: @button-glow;
-        border-bottom: 1px solid @shadow-glow;
+        border-bottom: 0.8px solid @shadow-glow;
     }
     100% {
         background-color: @button-glow;
-        border-bottom: 1px solid @shadow-glow;
+        border-bottom: 1.5px solid @shadow-glow;
     }
 }
 

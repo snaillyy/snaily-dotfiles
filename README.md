@@ -98,11 +98,11 @@ This is how I personally use Sway.
 * [Nazarii Semeniuk](https://nazarii-semeniuk.com/tutorials/pure-css-shine-animation/) - Helped me on how to make the shine animations.
 
 Wallpapers used, I am not sure of the authenticity of the sources:
-* [Blue Wallpaper]()
+* [Blue Wallpaper](https://wallpapersafari.com/w/jDn05v)
 * [Pink Wallpaper](https://wallpapers-clan.com/desktop-wallpapers/pink-flowers-blue-sky-pastel/)
-* [Green Wallpaper]()
-* [Coffee Wallpaper]()
-* [Monochromatic Light Wallpaper]()
-* [Monochromatic Dark Wallpaper]()
+* [Green Wallpaper](https://getwallpapers.com/wallpaper/full/5/7/9/1150211-forest-wallpaper-hd-1920x1080-windows-7.jpg)
+* [Coffee Wallpaper](https://wallpaperscraft.com/download/coffee_book_windowsill_130911/1920x1080)
+* [Monochromatic Light Wallpaper](https://www.wallpaper.cam/2023/08/pixelated-monochrome-reflection-arch.html)
+* [Monochromatic Dark Wallpaper](https://wallpapercave.com/w/wp11204844)
 
 #### ❤️ And thank you for using my configuration(s)!
