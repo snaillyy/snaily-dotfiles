@@ -14,7 +14,7 @@ I made this on SwayFX, not sure how well Waybar integrates towards other composi
 
 # Showcases:
 <video controls>
-    <source src="vid/preview.mp4">
+    <source src="previews/vid/preview.mp4">
 </video>
 
 ❤️  Music by [Aaron Cherof - Watcher](https://youtu.be/CcAV71mXg_8).
@@ -23,27 +23,27 @@ I made this on SwayFX, not sure how well Waybar integrates towards other composi
 
 <details>
     <summary><big>Blue</big></summary>
-    <img src="" alt="Theme screenshot"></img>
+    <img src="previews/screenshots/" alt="Theme screenshot"></img>
 </details>
 <details>
     <summary><big>Pink</big></summary>
-    <img src="screenshots/pink.png" alt="Theme screenshot"></img>
+    <img src="previews/screenshots/pink.png" alt="Theme screenshot"></img>
 </details>
 <details>
     <summary><big>Green</big></summary>
-    <img src="" alt="Theme screenshot"></img>
+    <img src="previews/screenshots/" alt="Theme screenshot"></img>
 </details>
 <details>
     <summary><big>Coffee</big></summary>
-    <img src="" alt="Theme screenshot"></img>
+    <img src="previews/screenshots/" alt="Theme screenshot"></img>
 </details>
 <details>
     <summary><big>Monochromatic Light</big></summary>
-    <img src="" alt="Theme screenshot"></img>
+    <img src="previews/screenshots/" alt="Theme screenshot"></img>
 </details>
 <details>
     <summary><big>Monochromatic Dark</big></summary>
-    <img src="" alt="Theme screenshot"></img>
+    <img src="previews/screenshots/" alt="Theme screenshot"></img>
 </details>
 
 # ⚠️ Issues:

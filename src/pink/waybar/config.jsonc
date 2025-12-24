@@ -281,14 +281,23 @@
   "battery": {
     "on-scroll-up": "",
     "on-scroll-down": "",
+    "on-click": "",
+
     "interval": 30,
+    "full-at": 100,
+    
     "format": "{icon} {capacity}%",
     "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-    "tooltip-format" : "{power}, {time}, {health}",
+    "format-charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅", ""],
+    "format-critical": "󱃍",
+    
+    "tooltip-format" : "{timeTo}, {power}W",
+    
     "bat-compatibility": true,
+    
     "states": {
       "warning": 30,
-      "critical": 15
+      "critical": 10
     }
   },
 
