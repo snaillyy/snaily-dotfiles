@@ -101,7 +101,7 @@
     "on-scroll-down": "",
     "format": "  ",
     "tooltip-format": "Lock screen",
-    "on-click": "~/.local/share/snaily-dotfiles/swayscripts/hardware.sh lock"
+    "on-click": "~/.local/share/snaily-dotfiles/scripts/hardware.sh lock"
   },
 
   "custom/suspend": {
@@ -109,7 +109,7 @@
     "on-scroll-down": "",
     "format": " 󰏤 ",
     "tooltip-format": "Suspend",
-    "on-click": "~/.local/share/snaily-dotfiles/swayscripts/hardware.sh suspend"
+    "on-click": "~/.local/share/snaily-dotfiles/scripts/hardware.sh suspend"
   },
   
   "custom/hibernate": {
@@ -117,7 +117,7 @@
     "on-scroll-down": "",
     "format": " 󰤄 ",
     "tooltip-format": "Hibernate",
-    "on-click": "~/.local/share/snaily-dotfiles/swayscripts/hardware.sh hibernate"
+    "on-click": "~/.local/share/snaily-dotfiles/scripts/hardware.sh hibernate"
   },
 
   "custom/restart": {
@@ -125,7 +125,7 @@
     "on-scroll-down": "",
     "format": "  ",
     "tooltip-format": "Restart",
-    "on-click": "~/.local/share/snaily-dotfiles/swayscripts/hardware.sh reboot"
+    "on-click": "~/.local/share/snaily-dotfiles/scripts/hardware.sh reboot"
   },
 
   "custom/poweroff": {
@@ -133,7 +133,7 @@
     "on-scroll-down": "",
     "format": " ⏻ ",
     "tooltip-format": "Power off",
-    "on-click": "~/.local/share/snaily-dotfiles/swayscripts/hardware.sh poweroff"
+    "on-click": "~/.local/share/snaily-dotfiles/scripts/hardware.sh poweroff"
   },
 
   // --- grouping modules ---
@@ -289,7 +289,7 @@
     "format": "{icon} {capacity}%",
     "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
     "format-charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅", ""],
-    "format-critical": "󱃍",
+    "format-critical": "󱃍 {capacity%}",
     
     "tooltip-format" : "{timeTo}, {power}W",
     
@@ -303,7 +303,7 @@
 
   // --- os icon ---
   "custom/os": {
-    "exec": "~/.local/share/snaily-dotfiles/swayscripts/icon.sh",
+    "exec": "~/.local/share/snaily-dotfiles/scripts/icon.sh",
     "format": "{text}",
     "tooltip-format": "OS Icon"
   },

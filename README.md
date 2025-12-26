@@ -54,10 +54,8 @@ I made this on SwayFX, not sure how well Waybar integrates towards other composi
 # Dependencies:
 Made using these versions or higher.
 
-Waybar:
 > waybar-0.14.0 \
 > bash-5.3_p3-r3 \
-> python-3.14.0 \
 > swaylock-1.8.0 \
 > swaync-0.12.2 \
 > nerdfonts-3.4.0 \
@@ -69,7 +67,10 @@ Optional:
 > grimshot (version unspecified)
 
 # Setup
-1. `git clone `
+> [!NOTE]
+> Make sure your .config files are backed up if there are existing configurations. \
+> `scripts` has to be in `$HOME/.local/share/snaily-dotfiles/`
+1. Download one of the releases.
 2. ``
 3. ``
 4. ``

@@ -13,7 +13,7 @@ exec --no-startup-id dbus-update-activation-environment --all
 xwayland enable
 
 # --- variables ---
-# term
+# terminal
 set $term kitty
 
 # wallpaper
@@ -29,7 +29,7 @@ set $menu fuzzel --config ~/.config/fuzzel/fuzzel.ini
 #set $menu dmenu_path | wmenu | xargs swaymsg exec --
 
 # screen locker
-set $lock ~/.local/share/snaily-dotfiles/swayscripts/hardware.sh lock
+set $lock ~/.local/share/snaily-dotfiles/scripts/hardware.sh lock
 
 # volume control
 set $volMute pactl set-sink-mute @DEFAULT_SINK@ toggle
@@ -272,6 +272,7 @@ bindsym $mod+r mode "resize"
 
 # --- hide swaybar to replace with waybar ---
 bar {
-  mode hide
-  modifier none
+    mode hide
+    modifier none
+    binding_mode_indicator no
 }
