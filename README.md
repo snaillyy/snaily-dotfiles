@@ -69,9 +69,11 @@ Optional:
 > * Make sure your .config files are backed up if there are existing configurations.
 > * `scripts` has to be in `$HOME/.local/share/snaily-dotfiles/`
 1. `git clone https://github.com/snaillyy/snaily-dotfiles`.
-2. ``
-3. ``
-4. ``
+2. `mkdir -p ~/.local/share/snaily-dotfiles`
+3. `cd snaily-dofiles/src`
+4. `cp -r .local/share/snaily-dotfiles ~/.local/share/`
+5. Copy the directories inside the theme (example: `cp -r blue/* ~/.config/`)
+6. I hope you like it!
 
 # Sway Keybinds:
 This is how I personally use Sway, I tried to make the config as modifiable as possible.
