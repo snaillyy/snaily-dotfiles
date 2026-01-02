@@ -68,7 +68,7 @@ Optional:
 > [!WARNING]
 > * Make sure your .config files are backed up if there are existing configurations.
 > * `scripts` has to be in `$HOME/.local/share/snaily-dotfiles/`
-1. Download one of the releases.
+1. `git clone https://github.com/snaillyy/snaily-dotfiles`.
 2. ``
 3. ``
 4. ``
