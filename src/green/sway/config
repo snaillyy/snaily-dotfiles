@@ -4,7 +4,7 @@ include misc/border
 include misc/swayfx
 
 # --- color theme ---
-include themes/pink/colors
+include themes/green/colors
 
 # --- screencast fix https://wiki.gentoo.org/wiki/Sway#Screen_sharing_does_not_work ---
 exec --no-startup-id dbus-update-activation-environment --all
@@ -17,7 +17,7 @@ xwayland enable
 set $term kitty
 
 # wallpaper
-set $wp1 ~/.local/share/snaily-dotfiles/wallpapers/pink-wallpaper.jpg
+set $wp1 ~/.local/share/snaily-dotfiles/wallpapers/green-wallpaper.jpg
 # set $wp2 
 
 # screenshot tools

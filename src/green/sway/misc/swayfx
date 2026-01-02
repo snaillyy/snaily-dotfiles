@@ -1,0 +1,26 @@
+blur enable
+blur_xray disable
+blur_passes 1
+blur_radius 2
+blur_brightness 1
+
+corner_radius 6
+
+shadows enable
+shadows_on_csd disable
+shadow_blur_radius 4
+shadow_offset 1 1
+
+layer_effects "waybar" {
+    blur disable;
+    shadow disable;
+    corner_radius 0;
+}
+
+layer_effects "wallpaper" {
+    blur disable;
+    blur_xray disable;
+    shadow disable;
+    shadows_on_csd disable;
+    corner_radius 0;
+}

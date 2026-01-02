@@ -4,12 +4,12 @@ font=FantasqueSansM Nerd Font
 text=FFFFFFFF
 button-text=FFFFFFFF
 
-background=FF91C900
+background=69AFFF00
 border=FFFFFFFF
 border-bottom=FFFFFFFF
 
-button-background=FF91C9FF
-details-background=FF91C9FF
+button-background=54A6FFFF
+details-background=54A6FFFF
 
 button-margin-right=40
 message-padding=10

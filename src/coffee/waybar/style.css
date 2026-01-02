@@ -1,28 +1,27 @@
 /* --- colorscheme --- */
 /* text color, background color, shadows, and borders */
 @define-color fg-color rgb(255, 255, 255);
-@define-color bg-color rgba(233, 170, 210, 1);
-@define-color shadow-color rgba(222, 125, 186, 1);
-
-@define-color tooltip-border rgba(255, 255, 255, 1);
+@define-color bg-color rgba(207, 175, 130, 1);
+@define-color shadow-color rgba(153, 125, 92, 1);
+@define-color border-color rgba(255, 255, 255, 1);
 
 /* modules background */
-@define-color modules-bg rgba(252, 136, 199, 1);
+@define-color modules-bg rgba(201, 162, 115, 1);
 @define-color modules-border rgba(255, 255, 255, 1);
 
 /* pulseaudio */
 @define-color audioslider-bg rgba(255, 255, 255, 1);
-@define-color audioslider-inner rgba(233, 170, 210, 1);
-@define-color audioslider-outter rgba(217, 111, 144, 1);
+@define-color audioslider-inner rgba(194, 154, 120, 1);
+@define-color audioslider-outter rgba(161, 119, 85, 1);
 
 /* battery or warnings */
-@define-color warning-bg rgba(255, 117, 172, 1);
+@define-color warning-bg rgba(191, 141, 86, 1);
 
-@define-color critical-bg rgba(255, 87, 132, 1);
+@define-color critical-bg rgba(138, 93, 43, 1);
 @define-color critical-text rgb(255, 255, 255);
 
 /* animation */
-@define-color button-glow rgba(255, 156, 217, 1);
+@define-color button-glow rgba(219, 182, 143, 1);
 @define-color shadow-glow rgba(255, 255, 255, 1);
 
 /* --- abstraction --- */

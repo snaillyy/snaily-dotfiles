@@ -1,15 +1,15 @@
 [warning]
 font=FantasqueSansM Nerd Font
 
-text=FFFFFFFF
+text=666666FF
 button-text=FFFFFFFF
 
-background=FF91C900
+background=FFFFFF00
 border=FFFFFFFF
 border-bottom=FFFFFFFF
 
-button-background=FF91C9FF
-details-background=FF91C9FF
+button-background=000000FF
+details-background=000000FF
 
 button-margin-right=40
 message-padding=10

@@ -245,11 +245,11 @@
                     "weeks-pos"     : "left",
                     "on-scroll"     : -1,
                     "format": {
-                              "months":     "<span color='#f55ba1'><b>{}</b></span>",
-                              "days":       "<span color='#ffffff'><b>{}</b></span>",
-                              "weeks":      "<span color='#de7ab1'><b>W{}</b></span>",
-                              "weekdays":   "<span color='#de7ab1'><b>{}</b></span>",
-                              "today":      "<span color='#fa3e94'><b><u>{}</u></b></span>"
+                              "months":     "<span color='#0E8A42'><b>{}</b></span>",
+                              "days":       "<span color='#FFFFFF'><b>{}</b></span>",
+                              "weeks":      "<span color='#0E8A42'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#0E8A42'><b>{}</b></span>",
+                              "today":      "<span color='#05662E'><b><u>{}</u></b></span>"
                               }
                     }
   },

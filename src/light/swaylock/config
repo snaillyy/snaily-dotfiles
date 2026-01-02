@@ -1,0 +1,59 @@
+# Options.
+daemonize
+ignore-empty-password
+show-failed-attempts
+
+show-keyboard-layout
+
+# Appearance
+# Sets the screen color (background.)
+color=FFFFFF
+
+# Lockscreen wallpaper
+image=~/.local/share/snaily-dotfiles/wallpapers/light-wallpaper.png
+
+# Inidcator settings.
+indicator-radius=100
+indicator-thickness=20
+
+# Sets the color of the line between the inside and ring.
+line-color=FFFFFF
+line-clear-color=FFFFFF
+line-caps-lock-color=000001
+line-ver-color=FFFFFF
+line-wrong-color=FFFFFF
+
+# Sets the color of the inside of the indicator.
+inside-color=FFFFFF
+inside-clear-color=FFFFFF
+inside-caps-lock-color=FFFFFF
+inside-ver-color=FFFFFF
+inside-wrong-color=FFFFFF
+
+# Sets the color of the layout text.
+layout-text-color=000001
+layout-bg-color=FFFFFF
+layout-border-color=000001
+
+# Sets the color of the ring of the indicator when typing or idle.
+ring-color=000001
+ring-clear-color=000001
+ring-caps-lock-color=000001
+ring-ver-color=FFFFFF
+ring-wrong-color=000001
+
+# Sets the color of the text.
+text-color=000001
+text-clear-color=000001
+text-caps-lock-color=000001
+text-ver-color=000001
+text-wrong-color=000001
+separator-color=000001
+
+# Sets the color of backspace highlight segments.
+bs-hl-color=FFFFFF
+caps-lock-bs-hl-color=FFFFFF
+
+# Sets the color of the key press highlight segments.
+key-hl-color=FFFFFF
+caps-lock-key-hl-color=000001

@@ -4,8 +4,8 @@
   "layer": "top",
   "position": "top",
 
-  /* for some reason, i have to give a null value to scrolling */
-  /* due to some weird bug crashing waybar when scrolling in grouped modules */
+  /* i had to give a null value to scrolling up/down */
+  /* due to a bug crashing waybar when scrolling grouped modules */
 
   "modules-center": ["sway/window"],
   "modules-left": ["custom/os", "custom/inv-border2", "sway/workspaces", "sway/mode"],
@@ -245,11 +245,11 @@
                     "weeks-pos"     : "left",
                     "on-scroll"     : -1,
                     "format": {
-                              "months":     "<span color='#f55ba1'><b>{}</b></span>",
-                              "days":       "<span color='#ffffff'><b>{}</b></span>",
-                              "weeks":      "<span color='#de7ab1'><b>W{}</b></span>",
-                              "weekdays":   "<span color='#de7ab1'><b>{}</b></span>",
-                              "today":      "<span color='#fa3e94'><b><u>{}</u></b></span>"
+                              "months":     "<span color='#000000'><b>{}</b></span>",
+                              "days":       "<span color='#858585'><b>{}</b></span>",
+                              "weeks":      "<span color='#000000'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#000000'><b>{}</b></span>",
+                              "today":      "<span color='#000000'><b><u>{}</u></b></span>"
                               }
                     }
   },

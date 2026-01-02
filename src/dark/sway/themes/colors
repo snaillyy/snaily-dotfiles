@@ -1,0 +1,8 @@
+#class                      #border          #background             #text             #indicator             #child_border
+client.focused              #000001          #FFFFFF                 #000001           #000001                #FFFFFF
+client.focused_inactive     #000001          #FFFFFF                 #000001           #000001                #000001
+client.focused_tab_title    #000001          #000001                 #FFFFFF           #000001                #000001
+
+client.unfocused            #000001          #000001                 #FFFFFF           #000001                #000001
+
+client.urgent               #000001          #FFFFFF                 #000001           #FFFFFF                #FFFFFF

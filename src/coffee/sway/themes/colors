@@ -1,0 +1,8 @@
+#class                      #border          #background             #text             #indicator             #child_border
+client.focused              #997D5C          #CFAF82                 #FFFFFF           #CFAF82                #CFAF82
+client.focused_inactive     #997D5C          #BAA37F                 #FFFFFF           #CFAF82                #CFAF82
+client.focused_tab_title    #B08C63          #B08C63                 #FFFFFF           #B08C63                #B08C63
+
+client.unfocused            #997D5C          #997D5C                 #FFFFFF           #997D5C                #997D5C
+
+client.urgent               #997D5C          #FFCC8F                 #FFFFFF           #FFBE6E                #FFBE6E

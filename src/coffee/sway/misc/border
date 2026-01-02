@@ -1,0 +1,18 @@
+## border (default),
+## border with no tab names (only appears with tabbed mode),
+## or no borders at all
+
+default_border pixel 2
+# default_border pixel 2
+# default_border none
+
+smart_borders off
+
+# title bar
+titlebar_border_thickness 2
+
+# window gaps
+gaps inner 8
+
+# font
+font pango:JetBrainsMono 10
