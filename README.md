@@ -17,7 +17,7 @@ I made this on SwayFX, not sure how well Waybar integrates towards other composi
     <source src="previews/vid/preview.mp4">
 </video>
 
-❤️  Music by [Aaron Cherof - Watcher](https://youtu.be/CcAV71mXg_8).
+❤️  Music by [unnamed planet by cephalo](https://youtu.be/3jLzzHcbktY).
 
 <h3>Screenshots:</h3>
 
@@ -127,6 +127,7 @@ Wallpapers used, I am not sure of the authenticity of the sources:
 * [Coffee Wallpaper](https://wallpaperscraft.com/download/coffee_book_windowsill_130911/1920x1080)
 * [Light Wallpaper](https://www.wallpaper.cam/2023/08/pixelated-monochrome-reflection-arch.html)
 * [Dark Wallpaper](https://wallpapercave.com/w/wp11204844)
+* [Wallpaper used in video](https://www.wallpaper.cam/2026/01/solitary-snowy-peak-under-starry-sky-4k.html?m=0)
 
 #### ❤️ And thank you for using my configuration(s)!
 No AI was used for this silly little project, I spent all of my budget writing the README file.
