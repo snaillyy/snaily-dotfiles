@@ -13,8 +13,8 @@ Dotfiles that I randomly worked on whenever I woke up in the middle of the night
 I made this on SwayFX, not sure how well Waybar integrates towards other compositors.
 
 # Showcases:
-<video controls>
-    <source src="previews/vid/preview.webm">
+<video controls="">
+    <source src="previews/vid/preview.mp4">
 </video>
 
 ### ❤️  Music by [unnamed planet by cephalo](https://youtu.be/3jLzzHcbktY).
