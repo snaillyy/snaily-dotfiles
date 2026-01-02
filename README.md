@@ -1,10 +1,10 @@
 # Table of Contents:
 - [Snaily's Dotfiles](#snailys-dotfiles)
 - [Showcases](#showcases)
-- [Issues](#⚠️-issues)
+- [Issues](#issues)
 - [Dependencies](#dependencies)
 - [Setup](#setup)
-- [Added/Changed Shortcuts](#addedchanged-shortcuts)
+- [Sway Keybinds](#sway-keybinds)
 - [Q&A](#qa)
 - [Credits](#credits)
 
@@ -13,9 +13,7 @@ Dotfiles that I randomly worked on whenever I woke up in the middle of the night
 I made this on SwayFX, not sure how well Waybar integrates towards other compositors.
 
 # Showcases:
-<video controls="">
-    <source src="previews/vid/preview.mp4">
-</video>
+https://github.com/user-attachments/assets/168793e6-ca4d-447a-a36d-b68a4b3683b3
 
 ### ❤️  Music by [unnamed planet by cephalo](https://youtu.be/3jLzzHcbktY).
 
@@ -46,7 +44,7 @@ I made this on SwayFX, not sure how well Waybar integrates towards other composi
     <img src="previews/screenshots/dark.png" alt="Theme screenshot"></img>
 </details>
 
-# ⚠️ Issues:
+# Issues:
 1. Scrolling up/down at the edge of grouped modules crashes waybar, seems like a bug.
 2. Hibernate doesn't work on OpenRC...
 3. `swayidle` segfaults waybar after turning off display. (WHY??)
@@ -75,7 +73,7 @@ Optional:
 3. ``
 4. ``
 
-# Sway Shortcuts:
+# Sway Keybinds:
 This is how I personally use Sway, I tried to make the config as modifiable as possible.
 |Command|Shortcut|Description|
 |-------|--------|-----------|
