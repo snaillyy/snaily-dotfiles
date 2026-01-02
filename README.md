@@ -17,7 +17,7 @@ I made this on SwayFX, not sure how well Waybar integrates towards other composi
     <source src="previews/vid/preview.mp4">
 </video>
 
-❤️  Music by [unnamed planet by cephalo](https://youtu.be/3jLzzHcbktY).
+### ❤️  Music by [unnamed planet by cephalo](https://youtu.be/3jLzzHcbktY).
 
 <h3>Screenshots:</h3>
 
