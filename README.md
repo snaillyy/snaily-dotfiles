@@ -15,7 +15,7 @@ I made this on SwayFX, not sure how well Waybar integrates towards other composi
 # Showcases:
 https://github.com/user-attachments/assets/168793e6-ca4d-447a-a36d-b68a4b3683b3
 
-### ❤️  Music by [unnamed planet by cephalo](https://youtu.be/3jLzzHcbktY).
+### ❤️  Song is [unnamed planet by cephalo](https://youtu.be/3jLzzHcbktY).
 
 <h3>Screenshots:</h3>
 
@@ -88,7 +88,8 @@ This is how I personally use Sway, I tried to make the config as modifiable as p
 
 # Q&A
 ### Q1. Changing Waybar colors?
-`@defined-colors` in the `path/to/waybar/style.css` file, the variables use RGB or RGBA.
+`@defined-colors` in the `path/to/waybar/style.css` file, the variables use RGB or RGBA. \
+I documented as much as I could, so I hope it's easier to change as you like.
 
 ### Q2. How can I change the calendar colors?
 `path/to/sway/config` look for the `calendar` format and change the `color=XXXXXX` as you like.
@@ -97,7 +98,7 @@ This is how I personally use Sway, I tried to make the config as modifiable as p
 `path/to/sway/themes/.../colors`, replace the dots with the color scheme chosen.
 
 ### Q4. How do I change wallpapers?
-By default they're set to `~/.local/share/snaily-dotfiles/wallpaper/foo.jpg` \
+By default they're set to `~/.local/share/snaily-dotfiles/wallpapers/foo.jpg` \
 There are two files one variable: \
 ~/.config/sway/config: `$wp1` \
 ~/.config/waylock/config: `image`
