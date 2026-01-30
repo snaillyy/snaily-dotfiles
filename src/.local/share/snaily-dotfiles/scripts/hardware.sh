@@ -1,25 +1,31 @@
 #!/usr/bin/env bash
-# my attempt at hardware signals..
-# todo: attempt generalization by checking if using other screen lockers
 
-# signal takes input from waybar (lock, suspend, etc.)
-signal=$1
+signal=$1 # takes input from waybar (lock, suspend, etc.)
+
 init=$(command -v systemctl loginctl dinitctl)
-screenLock=$(command -v swaylock)
+locker=$(command -v swaylock gtklock waylock)
+
+turnOffDisplayTimer=300
 
 # lock the screen when locking, suspending, or hibernating
-if [ $signal == "lock" ]; then
-    swaylock -C ~/.config/swaylock/config
+if [[ $signal == "lock" ]]; then
+    if [[ $locker == "/usr/bin/swaylock" ]]; then
+        swaylock -C ~/.config/swaylock/config
+    fi
 
-    pkill swayidle
+    if [[ $locker == "/usr/bin/gtklock" ]]; then
+        gtklock
+    fi
+
+    if [[ $locker == "/usr/bin/waylock" ]]; then
+        waylock -f
+    fi
+
+    pkill swayidle # pkill swayidle to avoid launching twice
     exec swayidle -w \
-            timeout 300 "swaymsg 'output * dpms off'" \
+            timeout $turnOffDisplayTimer "swaymsg 'output * dpms off'" \
             resume "swaymsg 'output * dpms on'" \
-            before-sleep "swaymsg 'output * dpms off'" \
-            after-resume "pkill swayidle" # idk why this part doesn't work
-elif [ $signal == "suspend" ] || [ $signal == "hibernate" ]; then
-    # no idea if swayidle should be used here
-    swaylock -C ~/.config/swaylock/config
+            before-sleep "swaymsg 'output * dpms off'"
 fi
 
 # example output: /usr/bin/loginctl poweroff
