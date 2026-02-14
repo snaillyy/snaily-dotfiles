@@ -45,9 +45,8 @@ https://github.com/user-attachments/assets/168793e6-ca4d-447a-a36d-b68a4b3683b3
 </details>
 
 # Issues:
-1. Scrolling up/down at the edge of grouped modules crashes waybar, seems like a bug.
-2. Hibernate doesn't work on OpenRC...
-3. `swayidle` segfaults waybar after turning off display. (WHY??)
+1. Hibernate doesn't work on OpenRC...
+2. `swayidle` segfaults waybar after turning off display. (WHY??)
 
 # Dependencies:
 Made using these versions or higher.
