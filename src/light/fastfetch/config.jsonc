@@ -1,0 +1,152 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+  "logo": {
+    "type": "auto",
+
+    "padding": {
+      "top": 0, 
+      "left": 0,
+      "right": 3
+    },
+
+    "color": {
+      "1": "black",
+      "2": "white"
+    }
+  },
+
+  "display": {
+    "separator": " ",
+
+    "constants": [
+      " »",
+      "\u001B[s\u001B[66C│\u001B[u",
+      "───────────────────────────────────"
+    ], 
+
+    "color": {
+      "title": "black",
+      "keys": "black"
+    },
+
+    "temp": {
+      "unit": "C"
+    }
+  },
+
+  "modules": [
+    {
+      "type": "custom",
+      "format": "╭{$3}󱀝{$3}╮"
+    },
+    {
+      "type": "title",
+      "key": "│ 󰉊 {$1}{$2}",
+      "format": "{user-name}",
+      "fqdn": false
+    },
+
+    {
+      "type": "custom",
+      "format": "├{$3}{$3}┤"
+    },
+    {
+      "type": "os",
+      "key": "│ 󰌽 {$1}{$2}"
+    },
+    {
+      "type": "kernel",
+      "key": "│  {$1}{$2}"
+    },
+    {
+      "type": "uptime",
+      "key": "│ 󰥔 {$1}{$2}"
+    },
+    {
+      "type": "packages",
+      "key": "│ 󰏓 {$1}{$2}"
+    },
+    {
+      "type": "terminal",
+      "key": "│  {$1}{$2}"
+    },
+    {
+      "type": "shell",
+      "key": "│  {$1}{$2}"
+    },
+
+    {
+      "type": "custom",
+      "format": "├{$3}{$3}┤"
+    },
+    
+    {
+      "type": "de",
+      "key": "│  {$1}{$2}"
+    },
+    {
+      "type": "wm",
+      "key": "│  {$1}{$2}"
+    },
+    {
+      "type": "wmtheme",
+      "key": "│ 󰉼 {$1}{$2}"
+    },
+    {
+      "type": "theme",
+      "key": "│  {$1}{$2}"
+    },
+    {
+      "type": "icons",
+      "key": "│  {$1}{$2}"
+    },
+
+    {
+      "type": "custom",
+      "format": "├{$3}{$3}┤"
+    },
+
+    {
+      "type": "cpu",
+      "key": "│  {$1}{$2}"
+    },
+    {
+      "type": "cpuusage",
+      "key": "│  {$1}{$2}",
+      "format": "{avg}"
+    },
+    {
+      "type": "gpu",
+      "key": "│ 󰾲 {$1}{$2}"
+    },
+    {
+      "type": "memory",
+      "key": "│  {$1}{$2}"
+    },
+    {
+      "type": "swap",
+      "key": "│  {$1}{$2}"
+    },
+    {
+      "type": "battery",
+      "key": "│ 󰁹 {$1}{$2}"
+    },
+
+    {
+      "type": "custom",
+      "format": "├{$3}{$3}┤"
+    },
+    
+    {
+      "type": "colors",
+      "symbol": "circle",
+      "key": "│  {$1}{$2}"
+    },
+
+    {
+      "type": "custom",
+      "format": "╰{$3}󱀝{$3}╯"
+    }
+  ]
+}
