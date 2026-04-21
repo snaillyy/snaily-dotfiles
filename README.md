@@ -1,1 +1,1 @@
-# Moved to [https://codeberg.org/snaily](https://codeberg.org/snaily/snaily-dotfiles)
+# Moved to https://codeberg.org/snaily/snaily-dotfiles
